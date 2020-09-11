@@ -10,17 +10,18 @@ BookThisShow requires [Python3](https://www.python.org/)  to run
 > Install the dependencies and devDependencies
 ```sh
 $ sudo apt install python3-pip git
-$ pip install virtualenv
+$ pip3 install virtualenv
 $ cd ~; mkdir bookthisshow; cd bookthisshow
 $ virtualenv -p python3 bts_env
 $ source bts_env/bin/activate
 $ git clone https://github.com/ansm/bts.git
 $ cd bts
-$ pip install -r requirement.txt
+$ pip3 install -r requirement.txt
 ```
 > Start server (port 8000)
 ```sh
 $ python manage.py migrate
+$ python manage.py test
 $ python manage.py runserver 0.0.0.0:8000
 ```
 ## Tech Stack 
