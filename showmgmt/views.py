@@ -28,9 +28,13 @@ class CinemaListView(generics.ListAPIView):
 
     def get_queryset(self):
         movie_id = self.request.query_params.get("movie")
+        city_name = self.request.query_params.get("city")
         try:
             movie = Movie.objects.get(id=movie_id)
         except:
             return []
         cinema_ids = Show.objects.filter(movie=movie).values_list('cinema_id')
-        return Cinema.objects.filter(id__in=cinema_ids).order_by('name')
+        if not city_name:
+            return Cinema.objects.filter(id__in=cinema_ids).order_by('name')
+        else:
+            return Cinema.objects.filter(city__name=city_name, id__in=cinema_ids).order_by('name')

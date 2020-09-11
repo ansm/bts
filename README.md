@@ -1,5 +1,7 @@
 # Book This Show (API Sets)
 
+## API Documentation
+Complete API Documentation available [here](https://documenter.getpostman.com/view/3060921/TVCmQjK6#1267b83a-9f33-4a01-a600-e03caa4504c)
 ## Installation
 ### Pre-Requisites
 BookThisShow requires [Python3](https://www.python.org/)  to run

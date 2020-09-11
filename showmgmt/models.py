@@ -16,7 +16,7 @@ class Cinema(models.Model):
         verbose_name_plural = "cinemas"
         
     def __str__(self):
-        return self.name
+        return "%s - %s" % (self.name, self.city.display_name)
 
 
 class Movie(models.Model):
