@@ -41,7 +41,7 @@ $ python manage.py runserver 0.0.0.0:8000
 
 ## Stack Architecture /Process Flow
 
-![Process FLow](http://dark-lab.in/ansm/wp-content/uploads/2020/09/bts.png)
+![Process FLow](https://github.com/ansm/bts/blob/master/bts.png?raw=true)
 
 ## Flow charts  [APIs]
 #### Book the show (/api/show/book)
