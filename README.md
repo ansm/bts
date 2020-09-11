@@ -18,9 +18,11 @@ $ git clone https://github.com/ansm/bts.git
 $ cd bts
 $ pip3 install -r requirement.txt
 ```
-> Start server (port 8000)
+> Migrate database & Start server (port 8000)
 ```sh
 $ python manage.py migrate
+$ python manage.py cities_light
+$ python manage.py createsuperuser
 $ python manage.py test
 $ python manage.py runserver 0.0.0.0:8000
 ```

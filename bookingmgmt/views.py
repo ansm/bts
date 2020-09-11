@@ -34,7 +34,7 @@ class BookShowView(APIView):
             elif int(reserved_seat_count) > show_obj.seat_available:
                 return Response({"error": "Requested number of seat(s) not avaialble"}, status=status.HTTP_400_BAD_REQUEST)
             booking = serializer.save()
-            return Response({"booking_id": booking.booking_id}, status=status.HTTP_201_CREATED)
+            return Response({"booking_id": booking.booking_id, "seats_reserved": booking.reserved_seat_count}, status=status.HTTP_201_CREATED)
         else:
             print(serializer.errors)
             return Response({"error": "Invalid request"}, status=status.HTTP_400_BAD_REQUEST)
