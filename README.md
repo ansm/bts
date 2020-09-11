@@ -2,7 +2,7 @@
 
 ## Installation
 ### Pre-Requisites
-BookThisShow requires [Python 3]([https://www.python.org/](https://www.python.org/))  to run
+BookThisShow requires [Python3](https://www.python.org/)  to run
 - Python 3.6 or greater
 
 ### Steps
@@ -22,14 +22,32 @@ $ pip install -r requirement.txt
 ```sh
 $ python manage.py migrate
 $ python manage.py runserver 0.0.0.0:8000
-> Nagivate 
 ```
+## Tech Stack 
+### Libraries
+ - [Django](https://www.djangoproject.com/)
+	 - As a development framework
+ -  [django-rest-auth](https://django-rest-auth.readthedocs.io/en/latest)
+	 - For user management (Signup/ Login / Forgot Password etc.)
+ - [django-rest-framework](https://www.django-rest-framework.org/)
+	 - For developing REST APIs
+### Database  
+- [SQLite](https://www.sqlite.org/index.html) (A light weight DB) 
+	- To store data generated on BTS
+### WSGI HTTP Server
+- [Gunicorn](https://gunicorn.org/) (A Python WSGI HTTP Server for UNIX)
+### Web Server
+- [Nginx](https://www.nginx.com/) (High performance LB & Web Serer/Reverse proxy server)
 
-## Process flow diagram [APIs]
-###  Book the show (/api/show/book)
+## Stack Architecture /Process Flow
+
+![Process FLow](http://dark-lab.in/ansm/wp-content/uploads/2020/09/bts.png)
+
+## Flow charts  [APIs]
+#### Book the show (/api/show/book)
 
 ```mermaid
-graph LR
+graph TD
 A((User)) -- Booking request --> B[Check if request seat availalble ]
 B -- If seats available --> C(Book seats)
 B -- If seats not available --> D(Cancel booking request)
